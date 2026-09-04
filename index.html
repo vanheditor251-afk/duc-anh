@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student CV — Duc Anh L. Ngo">
+<title>Duc Anh L. Ngo — Student CV</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --ink:#172033; --muted:#657089;
+    --accent:#315efb; --accent2:#7c3aed; --line:#e7eaf1;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  .hero{background:linear-gradient(135deg,#111827,#263b91 58%,#6d28d9);color:#fff;padding:72px 20px 105px}
+  .wrap{max-width:1050px;margin:auto}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:end}
+  .eyebrow{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;opacity:.78;font-weight:700}
+  h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:.98;margin:12px 0 20px;letter-spacing:-.055em}
+  .hero p{max-width:680px;margin:0;color:#dbe3ff;font-size:1.05rem}
+  .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .pill{padding:8px 13px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.08)}
+  .avatar{width:128px;height:128px;border-radius:32px;background:rgba(255,255,255,.1);
+          border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;font-size:2rem;font-weight:800}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .nav{display:flex;gap:22px;overflow:auto;padding:13px 20px;font-weight:700;font-size:.92rem}
+  nav a{white-space:nowrap;color:var(--muted)}
+  nav a:hover{color:var(--accent)}
+  main{margin-top:-48px;position:relative}
+  .layout{display:grid;grid-template-columns:1.55fr .85fr;gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 14px 35px rgba(20,28,55,.06)}
+  section{scroll-margin-top:80px}
+  .section-title{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin:0 0 20px}
+  h2{font-size:1.35rem;margin:0;letter-spacing:-.02em}
+  .section-title span{font-size:.78rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+  .item{padding:0 0 24px;margin:0 0 24px;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+  .item-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+  h3{font-size:1.03rem;margin:0 0 4px}
+  .org{color:var(--accent);font-weight:700}
+  .date{font-size:.82rem;color:var(--muted);white-space:nowrap}
+  ul{padding-left:20px;margin:11px 0 0}
+  li{margin:7px 0}
+  .metric{display:inline-block;background:#eef2ff;color:#3248a5;padding:2px 7px;border-radius:6px;font-weight:700}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{background:#f0f3f9;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:.88rem}
+  .award{padding:13px 0;border-bottom:1px solid var(--line)}
+  .award:last-child{border-bottom:0}
+  .award strong{display:block}
+  .quote{border-left:4px solid var(--accent);padding:3px 0 3px 15px;color:var(--muted);font-size:.95rem}
+  footer{text-align:center;color:var(--muted);padding:35px 20px 55px;font-size:.85rem}
+  .top{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700}
+  @media(max-width:800px){
+    .hero{padding-top:48px}.hero-grid{grid-template-columns:1fr}.avatar{display:none}
+    .layout{grid-template-columns:1fr} main{margin-top:-35px}
+    .card{padding:22px}.item-head{flex-direction:column;gap:3px}.date{white-space:normal}
+  }
+  @media print{
+    body{background:#fff}.hero{padding:35px;color:#000;background:#fff;border-bottom:2px solid #111}
+    .hero p,.contact,.eyebrow{color:#333}.pill{border-color:#bbb;background:#fff}
+    nav{display:none}main{margin-top:20px}.card{box-shadow:none;break-inside:avoid}
+    .layout{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">student portfolio · cv</div>
+      <h1>duc anh<br>l. ngo</h1>
+      <p>student at hanoi-amsterdam high school for the gifted, with interests and experience spanning machine learning, computer vision, iot systems, research, leadership, and community activities.</p>
+      <div class="contact">
+        <span class="pill">hanoi, vietnam</span>
+        <span class="pill">+84-xxx-xxx-xxx</span>
+        <span class="pill">ducanh11509@gmail.com</span>
+      </div>
+    </div>
+    <div class="avatar" aria-label="initials">DA</div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap nav">
+    <a href="#education">education</a>
+    <a href="#research">research</a>
+    <a href="#projects">projects</a>
+    <a href="#leadership">leadership</a>
+    <a href="#awards">awards</a>
+    <a href="#skills">skills</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="layout">
+    <div>
+      <section class="card" id="education">
+        <div class="section-title"><h2>education</h2><span>2024 — 2027</span></div>
+        <div class="item">
+          <div class="item-head">
+            <div>
+              <h3>hanoi-amsterdam high school for the gifted</h3>
+              <div class="org">hanoi, vietnam</div>
+            </div>
+            <div class="date">sep 2024 — june 2027</div>
+          </div>
+          <ul>
+            <li>grade 9 gpa: <span class="metric">9.x</span></li>
+            <li>grade 10 gpa: <span class="metric">9.2</span></li>
+            <li>grade 11 gpa: <span class="metric">9.x</span></li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>standardized tests</h3>
+          <ul>
+            <li>ielts: —</li>
+            <li>sat: <span class="metric">1470</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" id="research" style="margin-top:22px">
+        <div class="section-title"><h2>research experience</h2><span>2026</span></div>
+        <div class="item">
+          <h3>co-author &amp; lead researcher</h3>
+          <div class="org">international journal of multidisciplinary on science and management (ijmsm)</div>
+          <p><strong>project:</strong> “improving performance of electricity theft detection using combined machine learning models with real applications in vietnam”</p>
+          <ul>
+            <li>engineered an automated data preprocessing and feature extraction pipeline on a smart grid dataset of <span class="metric">34,823 customers</span> to identify abnormal power consumption patterns.</li>
+            <li>addressed severe data imbalance by applying advanced oversampling and undersampling techniques for rare fraud cases.</li>
+            <li>evaluated and optimized svm, random forest, and knn classifiers, achieving peak fraud detection accuracy of <span class="metric">99%</span> within a <span class="metric">30-second</span> processing threshold.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" id="projects" style="margin-top:22px">
+        <div class="section-title"><h2>personal project</h2><span>2025 — 2026</span></div>
+        <div class="item">
+          <h3>hardware &amp; systems developer</h3>
+          <div class="org">“smart wearable health warning device”</div>
+          <ul>
+            <li>designed and prototyped a smart wearable system using biosensors and microcontrollers to track heart rate and body temperature in real time.</li>
+            <li>programmed threshold-based alert algorithms to identify health anomalies and transmit localized distress signals via wireless protocols.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" id="leadership" style="margin-top:22px">
+        <div class="section-title"><h2>leadership &amp; activities</h2><span>2025 — 2026</span></div>
+        <div class="item">
+          <h3>project leader</h3>
+          <div class="org">“gui lua 2025” phase 6 showcase</div>
+          <ul>
+            <li>spearheaded structural planning, artistic direction, and operational execution for a youth cultural showcase.</li>
+            <li>managed cross-functional teams across performers, logistics, and media coordination to support seamless event delivery and community engagement.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>field volunteer</h3>
+          <div class="org">“warm winter 2025” humanitarian campaign</div>
+          <ul>
+            <li>collaborated with local charity organizations to coordinate and distribute winter welfare packages, thermal blankets, and academic supplies to disadvantaged children and families in remote regions.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section class="card" id="awards">
+        <div class="section-title"><h2>honors &amp; awards</h2><span>highlights</span></div>
+        <div class="award"><strong>gold medal</strong><span>world invention creativity olympic (wico)</span></div>
+        <div class="award"><strong>gold medal</strong><span>innovation and creativity prize competition (icpc) — project: “sign language recognition using computer vision.”</span></div>
+        <div class="award"><strong>school ambassador distinction</strong><span>hanoi-amsterdam high school for the gifted — recognized as the official face of the school for academic and community excellence.</span></div>
+        <div class="award"><strong>korea 2025 · korea 2026</strong></div>
+      </section>
+
+      <section class="card" id="skills" style="margin-top:22px">
+        <div class="section-title"><h2>skills</h2><span>toolkit</span></div>
+        <h3>technical skills</h3>
+        <div class="tags">
+          <span class="tag">machine learning</span><span class="tag">data preprocessing</span>
+          <span class="tag">feature extraction</span><span class="tag">microcontroller programming</span>
+          <span class="tag">iot systems</span><span class="tag">design</span>
+        </div>
+        <h3 style="margin-top:22px">soft skills</h3>
+        <div class="tags">
+          <span class="tag">project management</span><span class="tag">cross-functional leadership</span>
+          <span class="tag">public relations</span><span class="tag">event operations</span>
+        </div>
+        <h3 style="margin-top:22px">languages</h3>
+        <p>vietnamese — native<br>english — fluent</p>
+        <h3 style="margin-top:22px">interests</h3>
+        <p>acoustic guitar (performance &amp; fingerstyle)<br>sustainable development<br>healthcare management</p>
+      </section>
+
+      <section class="card" style="margin-top:22px">
+        <div class="section-title"><h2>profile</h2><span>quick view</span></div>
+        <p class="quote">research · technology · leadership · creativity · community impact</p>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  duc anh l. ngo · student cv
+  <br><a class="top" href="#top">↑ back to top</a>
+</footer>
+</body>
+</html>
